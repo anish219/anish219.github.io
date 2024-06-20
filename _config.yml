@@ -1,7 +1,7 @@
 # site settings
-title: Personal Website
-subtitle: by Anish
-email: youremailaddress@gmail.com
+title:
+subtitle:
+email:
 description: Welcome to my personal website. I love to learn and share my knowledge with others.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
