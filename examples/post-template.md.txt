@@ -1,0 +1,24 @@
+---
+layout: layouts/article.njk
+kind: post
+tags:
+- posts
+permalink: /writing/your-post-slug.html
+title: Your post title
+label: Technical note · Month YYYY
+summary: One sentence that explains what readers will learn.
+date_label: Month YYYY
+description: Short description for link previews.
+---
+
+## The question
+
+Start with the problem and why it matters.
+
+## What I tried
+
+Describe the method and link to evidence.
+
+## Results and limits
+
+State what worked, what did not, and what is still unknown.

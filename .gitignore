@@ -1,2 +1,7 @@
 .local-preview/
 .DS_Store
+_site/
+.venv/
+__pycache__/
+node_modules/
+scripts/generated/

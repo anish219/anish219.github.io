@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="{{ description or summary or site.description }}">
+  <meta property="og:type" content="{% if kind == 'project' or kind == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{{ title }}{% if title != site.name %} — {{ site.name }}{% endif %}">
+  <meta property="og:description" content="{{ description or summary or site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css?v={{ stylesVersion }}">
+  <title>{{ title }}{% if title != site.name %} | {{ site.name }}{% endif %}</title>
+</head>
+<body>
+<div class="shell">
+  <header class="site-header">
+    <a class="brand" href="/">{{ site.name }}</a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="/#about">About</a><a href="/#news">News</a><a href="/#projects">Projects</a><a href="/#writing">Writing</a>
+    </nav>
+  </header>
+  <main{% if kind != 'home' %} class="page-main"{% endif %}>{% block main %}{% endblock %}</main>
+  <footer class="site-footer">© {{ currentYear }} {{ site.name }} · <a href="/cv.html">Expanded CV</a>{% for link in site.links %} · <a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}</footer>
+</div>
+{% if has_mermaid %}<script type="module" src="/assets/mermaid.js"></script>{% endif %}
+{% if x_embed %}<script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>{% endif %}
+</body>
+</html>

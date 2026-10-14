@@ -1,0 +1,7 @@
+{% extends "layouts/base.njk" %}
+{% block main %}
+  <p class="back"><a href="{% if kind == 'project' %}/#projects{% else %}/#writing{% endif %}">← {% if kind == 'project' %}All projects{% else %}All writing{% endif %}</a></p>
+  <div class="eyebrow">{{ label }}</div><h1>{{ title }}</h1><p class="lead">{{ summary }}</p>
+  {% if links %}<p class="links">{% for link in links %}<a href="{{ link.url }}">[{{ link.label }}]</a>{% endfor %}</p>{% endif %}
+  {{ content | safe }}
+{% endblock %}

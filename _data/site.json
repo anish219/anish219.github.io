@@ -1,0 +1,12 @@
+{
+  "name": "Anish Ravichandran",
+  "url": "https://anish219.github.io",
+  "description": "Projects, technical writing, and an expanded CV from Anish Ravichandran.",
+  "profile_photo": "https://github.com/anish219.png",
+  "location": "San Francisco, CA",
+  "education": "MIT EECS, S.B. and M.Eng.",
+  "links": [
+    { "label": "GitHub", "url": "https://github.com/anish219" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/anish-ravichandran" }
+  ]
+}

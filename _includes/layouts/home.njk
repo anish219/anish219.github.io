@@ -1,0 +1,39 @@
+{% extends "layouts/base.njk" %}
+{% block main %}
+<section class="intro" id="about" aria-label="About Anish">
+  <aside class="sidebar">
+    <img class="profile-photo" src="{{ site.profile_photo }}" alt="{{ site.name }}'s GitHub profile photo">
+    <div class="identity">{{ site.name }}</div>
+    <p>{{ site.location }}</p>
+    <p>{{ site.education }}</p>
+    <div class="sidebar-links">{% for link in site.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}</div>
+  </aside>
+  <div class="intro-copy"><h1>{{ headline }}</h1>{{ content | safe }}</div>
+</section>
+
+<section class="section" id="news">
+  <h2>News</h2>
+  <ul class="news-list">{% for item in collections.news %}<li><strong>[{{ item.data.date_label }}]</strong> {{ item.templateContent | safe }}</li>{% endfor %}</ul>
+</section>
+
+<section class="section" id="projects">
+  <h2>Projects</h2>
+  <p class="note">Selected work, with my contribution and the limits of each result stated plainly. Projects are grouped by the year they began or were completed.</p>
+  {% for group in collections.projectGroups %}
+  <h3 class="year">{{ group.label }}</h3>
+  {% for project in group.projects %}
+  <article class="entry"><div class="when">{{ project.data.when }}</div><div>
+    <h3><a href="{{ project.url }}">{{ project.data.list_title or project.data.title }}</a></h3>
+    <p class="summary">{{ project.data.list_summary or project.data.summary }}</p>
+    <p class="context">{{ project.data.context }}</p>
+    <p class="links"><a href="{{ project.url }}">[project note]</a>{% for link in project.data.links %}<a href="{{ link.url }}">[{{ link.label }}]</a>{% endfor %}</p>
+  </div></article>
+  {% endfor %}{% endfor %}
+</section>
+
+<section class="section" id="writing">
+  <h2>Writing</h2>
+  {% for post in collections.writing %}<article class="entry"><div class="when">{{ post.data.date_label }}</div><div><h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3><p class="summary">{{ post.data.summary }}</p></div></article>{% endfor %}
+  {% for project in collections.projects %}{% if project.data.writing_featured %}<article class="entry"><div class="when">{{ project.data.when }}</div><div><h3><a href="{{ project.url }}">{{ project.data.writing_title or project.data.title }}</a></h3><p class="summary">{{ project.data.writing_summary or project.data.summary }}</p></div></article>{% endif %}{% endfor %}
+</section>
+{% endblock %}
