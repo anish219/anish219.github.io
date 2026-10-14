@@ -12,7 +12,6 @@ date_label: "Part 1"
 series_order: 1
 series: physical-ai
 homepage_writing: false
-has_mermaid: true
 ---
 
 *By Anish Ravichandran · Part 1 of Building a Robot Learning System*
