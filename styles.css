@@ -46,6 +46,13 @@ p{margin:0 0 12px}
 .page-main figure img,.page-main figure video{display:block;max-width:100%;height:auto;margin:0 auto;border-radius:3px}
 .page-main figure video{width:100%;max-height:540px;background:#121619}
 .page-main figcaption{font:.85rem/1.5 system-ui,sans-serif;color:var(--muted);margin-top:10px}
+.page-main figure .hardware{max-width:560px;max-height:620px;object-fit:contain}
+.page-main .budget-wrap{max-width:100%;overflow-x:auto;margin:26px 0 12px}
+.page-main .budget{width:100%;border-collapse:collapse;text-align:left;font-size:.96rem}
+.page-main .budget caption{text-align:left;font-weight:bold;padding-bottom:10px}
+.page-main .budget th,.page-main .budget td{padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.page-main .budget th{width:58%;font-weight:normal}
+.page-main .budget td{font-variant-numeric:tabular-nums}
 .page-main pre{max-width:100%;overflow-x:auto}
 .page-main .mermaid{overflow-x:auto;text-align:center}
 .page-main .mermaid svg{margin:0 auto}
