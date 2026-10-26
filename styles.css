@@ -42,6 +42,10 @@ p{margin:0 0 12px}
 .page-main h3{margin-top:20px}
 .page-main ul{padding-left:24px}
 .page-main img,.page-main svg,.page-main iframe{display:block;max-width:100%;height:auto}
+.page-main figure{margin:27px 0}
+.page-main figure img,.page-main figure video{display:block;max-width:100%;height:auto;margin:0 auto;border-radius:3px}
+.page-main figure video{width:100%;max-height:540px;background:#121619}
+.page-main figcaption{font:.85rem/1.5 system-ui,sans-serif;color:var(--muted);margin-top:10px}
 .page-main pre{max-width:100%;overflow-x:auto}
 .page-main .mermaid{overflow-x:auto;text-align:center}
 .page-main .mermaid svg{margin:0 auto}
