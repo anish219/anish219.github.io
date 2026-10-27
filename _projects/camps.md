@@ -7,6 +7,8 @@ permalink: /projects/camps.html
 title: Rebuilding CAMPS in Python
 label: Graduate Research · MIT LIDS / Electric Energy Systems Group · 2023–25
 summary: Turning a MATLAB research simulator into a Python library for building power-system models, inspecting their equations, and studying what happens when they move away from equilibrium.
+card_image: /assets/projects/camps/python-assembly-python-solver.png
+card_image_alt: Python CAMPS simulation trajectories showing several changing power-system states
 order: 40
 group: '2024'
 when: '2024'

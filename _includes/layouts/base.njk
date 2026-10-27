@@ -23,7 +23,7 @@
     </nav>
   </header>
   <main{% if kind != 'home' %} class="page-main"{% endif %}>{% block main %}{% endblock %}</main>
-  <footer class="site-footer">© {{ currentYear }} {{ site.name }} · <a href="/cv.html">Expanded CV</a>{% for link in site.links %} · <a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}</footer>
+  <footer class="site-footer">© {{ currentYear }} {{ site.name }}{% for link in site.links %} · <a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}</footer>
 </div>
 {% if has_mermaid %}<script type="module" src="/assets/mermaid.js"></script>{% endif %}
 {% if x_embed %}<script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>{% endif %}

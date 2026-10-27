@@ -7,6 +7,8 @@ permalink: /projects/grid-agent.html
 title: Building an explainable power-grid assistant
 label: M.Eng. Thesis · MIT EECS / Electric Energy Systems Group · 2025
 summary: I wanted to see whether an LLM could help make grid-operation decisions, and how much difference it would make to give it access to a simulator.
+card_image: /assets/projects/grid-agent/benchmark-grid.png
+card_image_alt: Grid2Op power grid network with substations, generators, loads, and line loading values
 order: 30
 group: '2024'
 when: '2024'

@@ -17,7 +17,31 @@
 </section>
 
 <section class="section" id="projects">
-  <h2>Projects</h2>
+  <div class="projects-heading">
+    <h2>Projects</h2>
+    <div class="project-view-switch" role="group" aria-label="Project view">
+      <button type="button" data-project-view="cards" aria-controls="project-cards" aria-pressed="true">Cards</button>
+      <button type="button" data-project-view="timeline" aria-controls="project-timeline" aria-pressed="false">Timeline</button>
+    </div>
+  </div>
+  <div class="project-card-grid" id="project-cards">
+    {% for project in collections.projects %}
+    <article class="project-card">
+      <a class="project-card-image{% if project.data.card_video %} project-card-video{% endif %}" href="{{ project.url }}" aria-label="{{ project.data.list_title or project.data.title }} project note">
+        {% if project.data.card_video %}<video muted loop playsinline preload="none" poster="{{ project.data.card_video_poster }}" data-card-video aria-hidden="true"><source src="{{ project.data.card_video }}" type="video/mp4"></video>
+        {% else %}<img src="{{ project.data.card_image }}" alt="{{ project.data.card_image_alt }}" loading="lazy" decoding="async"{% if project.data.card_image_position %} style="object-position:{{ project.data.card_image_position }}"{% endif %}>{% endif %}
+      </a>
+      <div class="project-card-content">
+        <div class="project-card-year">{{ project.data.when }}</div>
+        <h3><a href="{{ project.url }}">{{ project.data.list_title or project.data.title }}</a></h3>
+        <p class="summary">{{ project.data.list_summary or project.data.summary }}</p>
+        <p class="context">{{ project.data.context }}</p>
+        <p class="links"><a href="{{ project.url }}">[project note]</a>{% for link in project.data.links %}<a href="{{ link.url }}">[{{ link.label }}]</a>{% endfor %}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  <div id="project-timeline" hidden>
   {% for group in collections.projectGroups %}
   <h3 class="year">{{ group.label }}</h3>
   {% for project in group.projects %}
@@ -28,6 +52,7 @@
     <p class="links"><a href="{{ project.url }}">[project note]</a>{% for link in project.data.links %}<a href="{{ link.url }}">[{{ link.label }}]</a>{% endfor %}</p>
   </div></article>
   {% endfor %}{% endfor %}
+  </div>
 </section>
 
 <section class="section" id="writing">

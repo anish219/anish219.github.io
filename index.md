@@ -5,6 +5,8 @@ permalink: /index.html
 title: Anish Ravichandran
 description: Anish Ravichandran builds in robotics, AI, and physical systems. Projects, technical writing, and CV.
 headline: I build systems that impact the physical world.
+scripts:
+- /assets/project-view.js
 ---
 
 My work spans robotics, energy, and applied AI. I studied electrical engineering and computer science at MIT, where I completed an M.Eng. focused on artificial intelligence.

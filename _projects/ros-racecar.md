@@ -7,6 +7,10 @@ permalink: /projects/ros-racecar.html
 title: Perception and planning on an MIT ROS racecar
 label: MIT Robotics Science and Systems · Spring 2023
 summary: A semester of getting a small autonomous car to see, figure out where it was, and actually follow the path we gave it.
+card_image: /assets/projects/ros-racecar/lane-debug.jpg
+card_image_alt: Racecar camera view with detected lane lines and a green lookahead point
+card_video: /assets/projects/ros-racecar/city-driving.mp4
+card_video_poster: /assets/projects/ros-racecar/city-driving-poster.jpg
 order: 50
 group: '2023'
 when: '2023'

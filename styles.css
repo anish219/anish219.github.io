@@ -26,6 +26,27 @@ p{margin:0 0 12px}
 .news-list{margin:0;padding-left:25px}
 .news-list li{padding:0 0 12px 3px}
 .news-list li p{display:inline}
+[hidden]{display:none!important}
+.projects-heading{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:18px}
+.projects-heading h2{margin:0}
+.project-view-switch{display:inline-flex;border:1px solid var(--line);border-radius:5px;padding:3px;gap:3px;font:.82rem/1.3 system-ui,sans-serif}
+.project-view-switch button{border:0;border-radius:3px;background:transparent;color:var(--muted);font:inherit;padding:6px 12px;cursor:pointer}
+.project-view-switch button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.project-view-switch button:focus-visible{outline:2px solid var(--link);outline-offset:3px}
+.project-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.project-card{display:flex;flex-direction:column;min-width:0;border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--paper)}
+.project-card-image{display:block;aspect-ratio:16/9;overflow:hidden;background:var(--soft)}
+.project-card-image img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .2s ease}
+.project-card-video{background:#182128}
+.project-card-video video{display:block;width:100%;height:100%;object-fit:contain}
+.project-card-image:hover img{transform:scale(1.025)}
+.project-card-content{display:flex;flex:1;flex-direction:column;padding:16px 18px 17px}
+.project-card-year{font:.78rem/1.3 system-ui,sans-serif;color:var(--muted);margin-bottom:8px}
+.project-card h3{font-size:1.22rem;margin:0 0 7px}
+.project-card h3 a{color:var(--ink)}
+.project-card .summary{margin:0 0 11px}
+.project-card .context{color:var(--muted);font-size:.91rem;margin:auto 0 8px;padding-top:4px}
+.project-card .links{margin:0}
 .year{font-size:1.2rem;font-weight:400;margin:25px 0 12px}
 .year:first-of-type{margin-top:0}
 .entry{display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px;margin:0 0 25px}
@@ -94,6 +115,8 @@ p{margin:0 0 12px}
 .cv-item ul{margin:7px 0}
 .back{font-size:.92rem;margin:0 0 26px}
 @media(max-width:700px){body{font-size:16px}.shell{padding:0 20px}.site-header{align-items:flex-start;flex-direction:column}.nav{gap:9px 20px}.intro{grid-template-columns:1fr;gap:22px;padding-top:26px}.sidebar{display:grid;grid-template-columns:108px 1fr;gap:0 18px;align-items:start}.profile-photo{grid-row:span 4}.identity{margin:0 0 3px}.sidebar-links{margin-top:8px}.entry{grid-template-columns:1fr;gap:0}.entry .when{padding:0 0 2px}.page-main{margin-top:28px}.page-main h1{font-size:1.85rem}}
+@media(max-width:700px){.project-card-grid{grid-template-columns:1fr}.projects-heading{align-items:flex-start;flex-wrap:wrap}.project-card-image{aspect-ratio:16/10}}
+@media(prefers-reduced-motion:reduce){.project-card-image img{transition:none}.project-card-image:hover img{transform:none}}
 @media(max-width:700px){.page-main .latte-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 14px}.page-main .group-header img{max-height:none}.page-main .latte-gallery figure:last-child{grid-column:1 / -1;width:calc(50% - 7px);margin:auto}}
 @media(max-width:700px){.page-main .comparison-grid{grid-template-columns:1fr}.page-main .plot-controls{gap:12px}.page-main .plot-controls label{flex:1 1 170px}.page-main .table-wrap th,.page-main .table-wrap td{padding:9px 6px}}
 @media print{.nav,.back{display:none}.site-header{border:0}.shell{max-width:none}.page-main{max-width:none;margin:15px 0}.site-footer{display:none}a{color:inherit}}

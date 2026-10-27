@@ -7,6 +7,9 @@ permalink: /projects/spot-autowalk.html
 title: A summer building software for Spot
 label: Boston Dynamics · Robotics Software Internship · Summer 2022
 summary: Shipping Autowalk SDK examples, working on repeatable sensor pointing, and finding a few less industrial uses for a robot dog along the way.
+card_image: /assets/projects/spot-autowalk/intern-group.jpg
+card_image_alt: Boston Dynamics interns posing with Spot
+card_image_position: center 32%
 order: 70
 group: '2022'
 when: '2022'
