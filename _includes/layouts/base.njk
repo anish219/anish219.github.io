@@ -27,5 +27,6 @@
 </div>
 {% if has_mermaid %}<script type="module" src="/assets/mermaid.js"></script>{% endif %}
 {% if x_embed %}<script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>{% endif %}
+{% if scripts %}{% for src in scripts %}<script defer src="{{ src }}"></script>{% endfor %}{% endif %}
 </body>
 </html>
