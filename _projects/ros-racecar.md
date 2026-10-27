@@ -8,7 +8,7 @@ title: Perception and planning on an MIT ROS racecar
 label: MIT Robotics Science and Systems · Spring 2023
 summary: A semester of getting a small autonomous car to see, figure out where it was, and actually follow the path we gave it.
 order: 50
-group: 2023–25
+group: '2023'
 when: '2023'
 context: MIT coursework · ROS 2 · Computer vision
 list_title: ROS racecar perception and planning

@@ -7,7 +7,7 @@ permalink: /projects/explain-ai.html
 title: AI-assisted enterprise reporting with source review
 label: Co-founder and CTO · Explain AI · 2025–26
 summary: A document-grounded reporting workflow built for actual users, with citations and human review.
-order: 30
+order: 20
 group: '2025'
 when: '2025'
 context: Explain AI · Product engineering · Retrieval

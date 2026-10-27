@@ -8,7 +8,7 @@ title: Power design for a solar bus-stop sensing prototype
 label: MIT 6.9000 · Engineering for Impact · Spring 2023
 summary: Building a sensor for a bus stop meant thinking about more than the measurements. It also had to fit on a pole, send its data, and keep running without an outlet.
 order: 60
-group: 2023–25
+group: '2023'
 when: '2023'
 context: MIT Engineering for Impact · PCB design · Power budgeting
 list_title: Solar-powered bus stop sensing prototype
